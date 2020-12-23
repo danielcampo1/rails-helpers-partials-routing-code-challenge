@@ -7,7 +7,7 @@
 * What type of logic/responsibility is permissible in each?
 
 ## Part 2: Boat Rental App
-* In the previous challenge you built a form that allows the manager to record a new rental, associating an existing boat and a new or existing customer
+* In the previous challenge you built a form that allows the manager to record a new rental, associating an existing boat and a new customer
 * Boats have many Customers through Rentals
 * Customers have many boats through Rentals
 
@@ -17,7 +17,6 @@
 * Build a custom query method that returns only the rentals taking place in the future (after current datetime) and use this on the Boat index page
 * BONUS: Add server validations and display them in form
 
-### PART 2B - Build a rental index and show page with a nested resource
+### PART 2B - Build a rental index and baot show page with a nested resource
+* Build a boat show page that lists all the associated rentals along with an associated nested resource ('/boats/:id/rentals')
 * Link to each boat show page from the rentals index page
-* Build a boat show page that lists all the associated rentals
-* Create an associated nested resource ('/boats/:id/rentals')
