@@ -4,11 +4,17 @@ class Rental < ApplicationRecord
     belongs_to :boat
     belongs_to :customer
 
+
+    def self.future
+        where("date_time >?", DateTime.now)
+    end
+
     def date_time_cannot_be_in_past
         if self.date_time < DateTime.now
             errors.add('Rental date and time cannot be in past')
         end
     end
+
 
     def date_time_format
         self.date_time.strftime("%m/%d/%Y at %I:%M%p")

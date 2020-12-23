@@ -1,0 +1,9 @@
+<h1>Boat Rental Information</h1>
+<%= form_tag("/boats", method: "get") do %>
+    <%= select_tag "date", options_for_select(["Future"]), include_blank: true %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+
+<% @boats.each do |boat| %>
+<%= render partial: "boat", locals: {boat: boat} %>
+<% end %>
